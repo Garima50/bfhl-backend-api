@@ -6,7 +6,7 @@ const { askAI } = require("../utils/ai");
 
 
 
-// HEALTH CHECK
+// health chk
 router.get("/health", (req, res) => {
   res.status(200).json({
     is_success: true,
@@ -14,7 +14,7 @@ router.get("/health", (req, res) => {
   });
 });
 
-// POST BFHL
+
 router.post("/bfhl", async (req, res) => {
     //console.log("Route bfhl working")
   try {
@@ -53,7 +53,7 @@ if (key === "fibonacci") {
 
     res.status(200).json({
       is_success: true,
-      official_email: "YOUR_CHITKARA_EMAIL",
+      official_email: "garima1824.be23@chitkara.edu.in",
       data
     });
 
