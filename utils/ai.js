@@ -12,7 +12,11 @@ async function askAI(question) {
     }
   );
 
-  const text = response.data.candidates[0].content.parts[0].text;
+  const text =
+  response.data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+if (!text) {
+  throw new Error("Empty AI response");
+}
   return text.trim().split(/\s+/)[0]; // SINGLE WORD ONLY
 }
 
